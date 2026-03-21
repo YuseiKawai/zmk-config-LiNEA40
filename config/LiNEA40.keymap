@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -156,7 +156,7 @@
 &kp Q      &kp W         &kp E         &kp R    &kp T                                                &kp Y                 &kp U  &kp I         &kp O          &kp P
 &kp A      &kp S         &kp D         &kp F    &kp G                                                &kp H                 &kp J  &kp K         &kp L          &lt_fast 5 MINUS
 &kp Z      &kp X         &kp C         &kp V    &kp B                                                &kp N                 &kp M  &kp COMMA     &kp DOT        &kp SLASH
-&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &kp INS  &lt 5 TAB  &mt_fast LEFT_SHIFT SPACE    &lt 2 ENTER  &lt_fast 3 BACKSPACE         &lt 6 LC(UP)  &kp BACKSLASH  &mt RIGHT_SHIFT BACKSLASH
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &kp INS  &lt 5 TAB  &mt_fast LEFT_SHIFT SPACE    &lt 2 ENTER  &lt_fast 3 BACKSPACE         &lt 6 LC(UP)  &kp BACKSLASH  &mt RIGHT_GUI BACKSLASH
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -218,10 +218,10 @@
 
         SCROLLandVIM {
             bindings = <
-&trans       &kp LC(W)      &trans     &kp LC(R)  &trans                              &kp RG(C)  &kp RG(Z)     &kp RC(I)  &trans  &kp RG(V)
-&kp LG(TAB)  &trans         &trans     &trans     &trans                              &trans     &kp LG(PLUS)  &trans     &trans  &kp LG(MINUS)
-&kp LG(Z)    &kp BACKSPACE  &kp LG(C)  &kp LG(V)  &kp LG(B)                           &trans     &trans        &trans     &trans  &trans
-&trans       &trans         &trans     &trans     &trans     &kp LG(SPACE)    &trans  &trans                   &trans     &trans  &trans
+&trans     &kp LC(W)      &trans     &kp LC(R)  &trans                                     &kp RG(C)  &kp RG(Z)  &kp RC(I)  &trans  &kp RG(V)
+&kp TAB    &trans         &trans     &trans     &trans                                     &trans     &kp PLUS   &trans     &trans  &kp MINUS
+&kp LG(Z)  &kp BACKSPACE  &kp LG(C)  &kp LG(V)  &kp LG(B)                                  &trans     &trans     &trans     &trans  &trans
+&trans     &trans         &trans     &trans     &trans     &kp LG(SPACE)    &kp RIGHT_GUI  &trans                &trans     &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
