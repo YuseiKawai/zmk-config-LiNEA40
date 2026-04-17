@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -95,6 +95,11 @@
         Ctrl {
             bindings = <&kp LEFT_CONTROL>;
             key-positions = <0 10>;
+        };
+
+        right_click {
+            bindings = <&mkp MB2>;
+            key-positions = <17 18>;
         };
     };
 
@@ -156,10 +161,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB4  &trans    &mkp MB5  &trans
-&trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB1  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans  &trans  &trans
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
