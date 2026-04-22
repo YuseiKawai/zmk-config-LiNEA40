@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -105,6 +105,11 @@
         LEFT_CLICK {
             bindings = <&mkp MB1>;
             key-positions = <8 7>;
+        };
+
+        SCROLL_L {
+            bindings = <&mo 5>;
+            key-positions = <3 2>;
         };
     };
 
@@ -156,13 +161,11 @@
 &kp Q      &kp W         &kp E         &kp R    &kp T                                                       &kp Y            &kp U  &kp I         &kp O          &kp P
 &kp A      &kp S         &kp D         &kp F    &kp G                                                       &kp H            &kp J  &kp K         &kp L          &kp MINUS
 &kp Z      &kp X         &kp C         &kp V    &kp B                                                       &kp N            &kp M  &kp COMMA     &kp DOT        &kp SLASH
-&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &kp INS  &mt LEFT_GUI TAB  &mt_fast LEFT_SHIFT SPACE    &lt 2 ENTER  &lt 3 BACKSPACE         &lt 5 LC(UP)  &kp BACKSLASH  &mt RIGHT_GUI BACKSLASH
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &kp INS  &mt LEFT_GUI TAB  &mt_fast LEFT_SHIFT SPACE    &lt 2 ENTER  &lt 3 BACKSPACE         &lt 6 LC(UP)  &kp BACKSLASH  &mt RIGHT_GUI BACKSLASH
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
-
-        //1
 
         MOUSE {
             bindings = <
@@ -175,8 +178,6 @@
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
 
-        //2
-
         MARK {
             bindings = <
 &kp EXCLAMATION  &kp AT  &kp HASH  &kp DOLLAR      &kp PERCENT                        &kp CARET  &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
@@ -187,8 +188,6 @@
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
-
-        //3
 
         CURSOR {
             bindings = <
@@ -201,8 +200,6 @@
             sensor-bindings = <&mouse_scrl SCRL_LEFT SCRL_RIGHT>;
         };
 
-        //4
-
         FUNCTION {
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4   &kp F5                     &trans      &trans  &kp LA(PRINTSCREEN)  &trans  &kp LC(LA(DELETE))
@@ -214,8 +211,16 @@
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
 
-        //5
-        //6
+        SCROLL {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans  &trans  &trans
+            >;
+
+            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
+        };
 
         WIRELESS {
             bindings = <
@@ -233,7 +238,7 @@
 &kp Q         &kp W   &kp E   &kp R    &kp T                                                    &kp Y            &kp U  &kp I            &kp O                 &kp P
 &kp A         &kp S   &kp D   &kp F    &kp G                                                    &kp H            &kp J  &kp K            &kp L                 &kp MINUS
 &kp Z         &kp X   &kp C   &kp V    &kp B                                                    &kp N            &kp M  &kp COMMA        &kp PERIOD            &kp SLASH
-&kp LEFT_GUI  &trans  &trans  &kp INS  &mt TAB LCTRL  &mt_fast LEFT_SHIFT SPACE    &lt 2 ENTER  &lt 3 BACKSPACE         &lt 5 RIGHT_GUI  &kp NON_US_BACKSLASH  &kp RIGHT_GUI
+&kp LEFT_GUI  &trans  &trans  &kp INS  &mt TAB LCTRL  &mt_fast LEFT_SHIFT SPACE    &lt 2 ENTER  &lt 3 BACKSPACE         &lt 6 RIGHT_GUI  &kp NON_US_BACKSLASH  &kp RIGHT_GUI
             >;
         };
     };
