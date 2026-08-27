@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -158,10 +158,10 @@
 
         Mac_default_layer {
             bindings = <
-&kp Q      &kp W         &kp E         &kp R    &kp T                                                       &kp Y            &kp U  &kp I         &kp O          &kp P
-&kp A      &kp S         &kp D         &kp F    &kp G                                                       &kp H            &kp J  &kp K         &kp L          &kp MINUS
-&kp Z      &kp X         &kp C         &kp V    &kp B                                                       &kp N            &kp M  &kp COMMA     &kp DOT        &kp SLASH
-&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &kp INS  &mt LEFT_GUI TAB  &mt_fast LEFT_SHIFT SPACE    &lt 2 ENTER  &lt 3 BACKSPACE         &lt 6 LC(UP)  &kp BACKSLASH  &mt RIGHT_GUI BACKSLASH
+&kp Q         &kp W         &kp E         &kp R    &kp T                                                           &kp Y            &kp U  &kp I         &kp O          &kp P
+&kp A         &kp S         &kp D         &kp F    &kp G                                                           &kp H            &kp J  &kp K         &kp L          &kp MINUS
+&kp Z         &kp X         &kp C         &kp V    &kp B                                                           &kp N            &kp M  &kp COMMA     &kp DOT        &kp SLASH
+&kp LEFT_ALT  &kp LEFT_WIN  &kp LEFT_ALT  &kp INS  &mt LEFT_CONTROL TAB  &mt_fast LEFT_SHIFT SPACE    &lt 2 ENTER  &lt 3 BACKSPACE         &lt 6 LC(UP)  &kp BACKSLASH  &mt RIGHT_GUI BACKSLASH
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -191,10 +191,10 @@
 
         CURSOR {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4              &kp NUMBER_5                         &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9   &kp NUMBER_0
-&trans        &trans        &trans        &kp LG(LS(LC(NUMBER_4)))  &kp C_VOLUME_UP                      &kp LEFT      &kp DOWN       &kp UP        &kp RIGHT      &kp BACKSPACE
-&trans        &trans        &trans        &kp LA(LG(T))             &kp C_VOLUME_DOWN                    &kp LA(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP   &kp RA(RIGHT)  &kp END
-&trans        &trans        &trans        &trans                    &trans             &trans    &trans  &trans                       &trans        &trans         &trans
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp NUMBER_5                         &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9   &kp NUMBER_0
+&trans        &trans        &trans        &kp LG(LS(S))  &kp C_VOLUME_UP                      &kp LEFT      &kp DOWN       &kp UP        &kp RIGHT      &kp BACKSPACE
+&trans        &trans        &trans        &kp LA(LG(T))  &kp C_VOLUME_DOWN                    &kp LA(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP   &kp RA(RIGHT)  &kp END
+&trans        &trans        &trans        &trans         &trans             &trans    &trans  &trans                       &trans        &trans         &trans
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_LEFT SCRL_RIGHT>;
