@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -88,13 +88,8 @@
         };
 
         Tab {
-            bindings = <&kp TAB>;
+            bindings = <&kp LEFT_ALT>;
             key-positions = <10 11>;
-        };
-
-        Ctrl {
-            bindings = <&kp LEFT_CONTROL>;
-            key-positions = <0 10>;
         };
 
         right_click {
@@ -120,6 +115,11 @@
         left_wireless {
             bindings = <&mo 6>;
             key-positions = <31 32>;
+        };
+
+        GUI {
+            bindings = <&kp LEFT_GUI>;
+            key-positions = <20 21>;
         };
     };
 
@@ -201,10 +201,10 @@
 
         CURSOR {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp NUMBER_5                         &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8      &kp NUMBER_9       &kp NUMBER_0
-&trans        &trans        &trans        &kp LG(LS(S))  &kp C_VOLUME_UP                      &kp LEFT      &kp DOWN      &kp UP            &kp RIGHT          &kp BACKSPACE
-&trans        &trans        &trans        &kp LA(LG(T))  &kp C_VOLUME_DOWN                    &kp RG(LEFT)  &kp RG(DOWN)  &kp RG(UP_ARROW)  &kp RA(RG(RIGHT))  &kp END
-&trans        &trans        &trans        &trans         &trans             &trans    &trans  &trans                      &trans            &trans             &trans
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp NUMBER_5                         &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8      &kp NUMBER_9   &kp NUMBER_0
+&trans        &trans        &trans        &kp LG(LS(S))  &kp C_VOLUME_UP                      &kp LEFT      &kp DOWN      &kp UP            &kp RIGHT      &kp BACKSPACE
+&trans        &trans        &trans        &kp LC(LS(V))  &kp C_VOLUME_DOWN                    &kp RG(LEFT)  &kp RG(DOWN)  &kp RG(UP_ARROW)  &kp RG(RIGHT)  &kp END
+&trans        &trans        &trans        &trans         &trans             &trans    &trans  &trans                      &trans            &trans         &trans
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_LEFT SCRL_RIGHT>;
@@ -245,10 +245,10 @@
 
         Mac_Layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R    &kp T                                                       &kp Y            &kp U  &kp I            &kp O                 &kp P
-&kp A             &kp S         &kp D         &kp F    &kp G                                                       &kp H            &kp J  &kp K            &kp L                 &kp MINUS
-&kp Z             &kp X         &kp C         &kp V    &kp B                                                       &kp N            &kp M  &kp COMMA        &kp PERIOD            &kp SLASH
-&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &kp INS  &mt TAB LEFT_WIN  &mt_fast LEFT_SHIFT SPACE    &lt 2 ENTER  &lt 3 BACKSPACE         &lt 6 RIGHT_GUI  &kp NON_US_BACKSLASH  &kp RIGHT_GUI
+&kp Q             &kp W         &kp E         &kp R    &kp T                                                       &kp Y            &kp U  &kp I      &kp O                 &kp P
+&kp A             &kp S         &kp D         &kp F    &kp G                                                       &kp H            &kp J  &kp K      &kp L                 &kp MINUS
+&kp Z             &kp X         &kp C         &kp V    &kp B                                                       &kp N            &kp M  &kp COMMA  &kp PERIOD            &kp SLASH
+&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &kp INS  &mt TAB LEFT_WIN  &mt_fast LEFT_SHIFT SPACE    &lt 2 ENTER  &lt 3 BACKSPACE         &mo 6      &kp NON_US_BACKSLASH  &kp RIGHT_GUI
             >;
         };
     };
